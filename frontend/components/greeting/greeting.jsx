@@ -38,6 +38,9 @@ class Greeting extends React.Component {
           <section className="center-text">
             Unlimited movies, TV <br/>
             shows, and more.
+            <p className="center-text-small">
+              Watch anywhere. Cancel anytime.
+            </p>
           </section>
           <button className="demo-login" onClick={this.handleDemoUserLogin}>
             Try Neatflix as Demo User now!

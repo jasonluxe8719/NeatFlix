@@ -1,6 +1,9 @@
 .neatflix-logo {
   color: red;
   font-size: 32px;
+  margin: 10px 10px 10px 10px;
+  font-weight: bold;
+  padding-left: 10px;
  }
 
  .signin-signup {
@@ -12,18 +15,27 @@ input[type="submit"].signin-button,
 input[type="submit"].signup-button {
   background-color: red;
   color: white;
-  padding: 5px 15px;
+  padding: 10px 10px;
   font-size: 16px;
-  margin: 10px 10px 10px 10px;
+  margin: 20px 20px 10px 10px;
   border-style: none;
 }
 
-button.demo-login,
+
 button.logout-button {
   background-color: red;
   color: white;
   padding: 5px 15px;
   font-size: 16px;
+  
+}
+
+button.demo-login {
+  background-color: red;
+  color: white;
+  padding: 5px 15px;
+  font-size: 30px;
+  margin: 20px 20px 20px 20px;
 }
 
 .greeting-container { 
@@ -38,12 +50,22 @@ button.logout-button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 500px;
+  min-height: 600px;
 }
 
 .center-text {
   color: white;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 50px;
+  text-align: center;
+  font-family: sans-serif;
 }
 
+.center-text-small {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  font-family: sans-serif;
+  padding-top: 10px;
+  font-weight: 100;
+}
