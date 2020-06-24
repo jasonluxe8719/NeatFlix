@@ -1,0 +1,49 @@
+.neatflix-logo {
+  color: red;
+  font-size: 32px;
+ }
+
+ .signin-signup {
+   display: flex;
+   justify-content: space-between;
+ }
+
+input[type="submit"].signin-button,
+input[type="submit"].signup-button {
+  background-color: red;
+  color: white;
+  padding: 5px 15px;
+  font-size: 16px;
+  margin: 10px 10px 10px 10px;
+  border-style: none;
+}
+
+button.demo-login,
+button.logout-button {
+  background-color: red;
+  color: white;
+  padding: 5px 15px;
+  font-size: 16px;
+}
+
+.greeting-container { 
+  width: 100%;
+  height: 800px;
+  background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/dead63cd-f004-43ff-9ecb-d6381f56b76e/0a8f62ef-224d-46e3-be2c-e7b1227c51b8/US-en-20200617-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+  background-size: cover;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 500px;
+}
+
+.center-text {
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+}
+
