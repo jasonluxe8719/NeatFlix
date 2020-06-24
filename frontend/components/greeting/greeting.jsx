@@ -20,7 +20,7 @@ class Greeting extends React.Component {
       <div className="greeting-container">
         <header>
           <nav className="signin-signup">
-            <p className="neatflix-logo">NEATFLIX</p>
+            <h1 className="neatflix-logo">NEATFLIX</h1>
             <div className="nav-links">
               <Link to="/login">
                 <input className="signin-button"

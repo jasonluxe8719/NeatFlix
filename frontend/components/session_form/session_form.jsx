@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -35,22 +36,27 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          {this.props.formType}
+      <div className="session-form-container">
+        <nav>
+              <Link to="/">
+                <h1 className="neatflix-logo">NEATFLIX</h1>
+              </Link>
+        </nav>
+        <form onSubmit={this.handleSubmit} className="session-form-box">
+          <p className="form-type">{this.props.formType}</p>
           {this.renderErrors()}
-          <div className="login-form"> 
+          <div className="session-form"> 
             <br/>
             <input type="text"
               value={this.state.email}
               onChange={this.update('email')}
-              className="login-input"
+              className="session-input-email"
             />
             <br/>
             <input type="password"
               value={this.state.password}
               onChange={this.update('password')}
-              className="login-input"
+              className="session-input-password"
             />
             <br/>
             <input type="submit" 
