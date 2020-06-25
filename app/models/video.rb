@@ -4,7 +4,7 @@ class Video < ApplicationRecord
   belongs_to :genre,
     primary_key: :id,
     foreign_key: :genre_id,
-    class_name: :genre
-    
-  has_one_attached :video
+    class_name: :Genre
+
+  has_one_attached :clip
 end

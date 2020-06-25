@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -50,19 +50,11 @@ class Greeting extends React.Component {
     )
   }
 
-  logoutLink () {
-    return(
-      <nav className="logout">
-        <button className="logout-button" onClick={this.props.logout}>Sign Out</button>
-      </nav>
-    )
-  }
-
 
   render() {
     return(
       <div>
-        {this.props.currentUser ? this.logoutLink() : this.sessionLinks()}
+        {this.props.currentUser ? <Redirect to="/browse" /> : this.sessionLinks()}
       </div>
     )
   }
