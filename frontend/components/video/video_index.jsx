@@ -13,17 +13,21 @@ class VideoIndex extends React.Component {
     this.props.fetchVideos();
   }
 
-  handleHover(idx, e) {
-    const myVideo = document.getElementsByClassName('video')[0];
-    myVideo.muted = false;
-    myVideo.play();
+  handleHover(e) {
+    // debugger
+    // const myVideo = document.getElementsByClassName('video')[0];
+    // debugger
+    e.target.muted = false;
+    // myVideo.muted = false;
+    e.target.play();
 
 
   }
 
-  handleHide(idx, e) {
-    const myVideo = document.getElementsByClassName('video')[0];
-    myVideo.pause();
+  handleHide(e) {
+    // const myVideo = document.getElementsByClassName('video')[0];
+    // myVideo.pause();
+    e.target.pause();
   }
   
 

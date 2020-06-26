@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Genre.delete_all
-Video.delete_all
-User.delete_all
+Genre.destroy_all
+Video.destroy_all
+User.destroy_all
 
 u1 = User.create({email: "demouser@neatflix.com", password: "123456"})
 
@@ -24,15 +24,13 @@ description: "Jason Bourne (Matt Damon) is living in India when he is framed by 
 genre_id: g1.id
 })
 
-v1.clip.attach(io: File.open('/Users/jasonpark/Desktop/fsp_videos/BourneSupremacy.mp4'),
-filename: 'BourneSupremacy.mp4'
-)
+v1_clip = open("https://neatflix-dev.s3.amazonaws.com/BourneSupremacy.mp4")
+v1.clip.attach(io: v1_clip, filename: 'BourneSupremacy.mp4')
 
 v2 = Video.create({title: "Kingdom",
 description: "While strange rumors about their ill king grips a kingdom, the crown prince becomes their only hope against a mysterious plague overtaking the land.",
 genre_id: g5.id
 })
 
-v2.clip.attach(io: File.open('/Users/jasonpark/Desktop/fsp_videos/Kingdom.mp4'),
-  filename: 'Kingdom.mp4'
-)
+v2_clip = open("https://neatflix-dev.s3.amazonaws.com/Kingdom.mp4")
+v2.clip.attach(io: v2_clip, filename: 'Kingdom.mp4')
