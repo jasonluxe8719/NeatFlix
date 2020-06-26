@@ -8,6 +8,9 @@
 
 Genre.delete_all
 Video.delete_all
+User.delete_all
+
+u1 = User.create({email: "demouser@neatflix.com", password: "123456"})
 
 g1 = Genre.create({name: "Action"})
 g2 = Genre.create({name: "Comedy"})

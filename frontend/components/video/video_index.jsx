@@ -15,7 +15,6 @@ class VideoIndex extends React.Component {
 
   handleHover(idx, e) {
     const myVideo = document.getElementsByClassName('video')[0];
-    debugger
     myVideo.muted = false;
     myVideo.play();
 
