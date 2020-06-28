@@ -1,52 +1,98 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import VideoIndexItem from './video_index_item';
 // import ReactPlayer from 'react-player';
 
 class VideoIndex extends React.Component {
   constructor(props) {
     super(props);
-
-    this.handleHover = this.handleHover.bind(this);
-    this.handleHide = this.handleHide.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchVideos();
   }
-
-  handleHover(e) {
-    // debugger
-    // const myVideo = document.getElementsByClassName('video')[0];
-    // debugger
-    e.target.muted = false;
-    // myVideo.muted = false;
-    e.target.play();
-
-
-  }
-
-  handleHide(e) {
-    // const myVideo = document.getElementsByClassName('video')[0];
-    // myVideo.pause();
-    e.target.pause();
-  }
   
-
   render() {
+
     return(
-    <div>
-      <nav className="logout">
-        <button className="logout-button" onClick={this.props.logout}>Sign Out</button>
-      </nav>
+    <div className="browse-container">
+      <header className="browse-nav-container">
+        <nav className="browse-left">
+          <Link to="/">
+            <span className="browse-logo">NEATFLIX</span>
+          </Link>
+          <Link to="/browse">
+            <span className="browse-home">Home</span>
+          </Link>
+          <Link to="/tvshows">
+            <span className="browse-tv">TV Shows</span>
+          </Link>
+          <Link to ="/movies">
+            <span className="browse-movies">Movies</span>
+          </Link>
+        </nav>
+
+        <nav className="browse-right">
+          <button className="browse-logout-button" onClick={this.props.logout}>Sign Out</button>
+        </nav>
+        
+      </header>
       <br/>
-      <section>
-        {this.props.videos.map((video) => 
-        <video src={video.clip}
-          className="video"
-          preload="false"
-          onMouseOver={this.handleHover}
-          onMouseOut={this.handleHide}
-          muted="muted"
-        />)}
+      <span className="browse-title">Action</span>
+      <div className="carousel-action">
+          <section className="browse-action-1" id="action1">
+              <ul className="action-vid">
+                {(this.props.videos.filter(vid => vid.name === "Action")).slice(0, 2).map((video) =>
+                  <VideoIndexItem
+                    video={video}
+                    key={video.id}
+                  />
+                )}
+              </ul>
+          </section>
+          <section className="browse-action-2" id="action2">
+            <ul className="action-vid">
+              {(this.props.videos.filter(vid => vid.name === "Action")).slice(2).map((video) =>
+                <VideoIndexItem
+                  video={video}
+                  key={video.id}
+                />
+              )}
+            </ul>
+          </section>
+      </div>
+      <section className="browse-kdramas">
+        <span className="browse-title">K-Dramas</span>
+          <ul>
+            {this.props.videos.filter(vid => vid.name === "K-dramas").map((video) =>
+              <VideoIndexItem
+                video={video}
+                key={video.id}
+              />
+            )}
+          </ul>
+      </section>
+      <section className="browse-comedy">
+          <span className="browse-title">Comedies</span>
+          <ul>
+            {this.props.videos.filter(vid => vid.name === "Comedy").map((video) =>
+              <VideoIndexItem
+                video={video}
+                key={video.id}
+              />
+            )}
+          </ul>
+      </section>
+      <section className="browse-anime">
+          <span className="browse-title">Anime</span>
+          <ul>
+            {this.props.videos.filter(vid => vid.name === "Anime").map((video) =>
+              <VideoIndexItem
+                video={video}
+                key={video.id}
+              />
+            )}
+          </ul>
       </section>
     </div>
     )

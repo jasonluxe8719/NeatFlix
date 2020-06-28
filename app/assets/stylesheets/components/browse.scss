@@ -1,0 +1,61 @@
+
+
+.browse-container {
+  background: #7be0ac;
+  height: 2000px;
+  width: 100%;
+}
+
+.browse-nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+.browse-left {
+  padding-top: 15px;
+  padding-left: 15px;
+}
+.browse-logo {
+  color: red;
+  font-size: 25px;
+  margin: 10px 10px 10px 10px;
+  font-weight: bold;
+ }
+
+ .browse-home, .browse-tv, .browse-movies {
+   color: white;
+   font-size: 15px;
+   margin: 10px 10px 10px 10px;
+ }
+
+ .browse-right {
+   padding-top: 15px;
+   padding-right: 15px;
+ }
+
+ .browse-logout-button {
+  background-color: red;
+  color: white;
+  margin: 10px 10px 10px 10px;
+  font-size: 20px;
+ }
+
+ .browse-title {
+   color: white;
+   font-size: 20px;
+ }
+
+
+.browse-action-1, 
+.browse-action-2 {
+    display: flex;
+    padding: 0 55px;
+}
+
+.action-vid {
+  background: red;
+  flex: 0 0 19.7%;
+  text-align: center;
+  margin: 0 2px;
+  transition: transform 300ms ease 100ms;
+}
+ 
