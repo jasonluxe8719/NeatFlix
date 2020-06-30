@@ -10,7 +10,7 @@ class VideoIndexItem extends React.Component {
   }
 
   handleHover(e) {
-    // debugger
+
     // const myVideo = document.getElementsByClassName('video')[0];
     // debugger
     e.target.muted = false;
@@ -23,19 +23,22 @@ class VideoIndexItem extends React.Component {
   handleHide(e) {
     // const myVideo = document.getElementsByClassName('video')[0];
     // myVideo.pause();
-    e.target.pause();
+    e.target.load();
   }
 
   render() {
     const {video} = this.props;
+    
     return(
       <div>
         <video
           src={video.clip}
+          poster={video.photo}
           className="video"
           onMouseOver={this.handleHover}
           onMouseOut={this.handleHide}
           muted="muted"
+          // style={{"height": "200px"}}
         />
       </div>
     )

@@ -16,9 +16,9 @@ class MovieTypeIndex extends React.Component {
     return (
       <div className="browse-container">
         <header className="browse-nav-container">
-          <nav className="browse-left">
+          <nav>
             <Link to="/">
-              <span className="browse-logo">NEATFLIX</span>
+              <img src={window.logoURL} />
             </Link>
             <Link to="/browse">
               <span className="browse-home">Home</span>

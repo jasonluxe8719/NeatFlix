@@ -38,9 +38,9 @@ class SessionForm extends React.Component {
     return (
       <div className="session-form-container">
         <nav>
-              <Link to="/">
-                <h1 className="neatflix-logo">NEATFLIX</h1>
-              </Link>
+          <Link to="/">
+            <img src={window.logoURL} />
+          </Link>
         </nav>
         <form onSubmit={this.handleSubmit} className="session-form-box">
           <p className="form-type">{this.props.formType}</p>

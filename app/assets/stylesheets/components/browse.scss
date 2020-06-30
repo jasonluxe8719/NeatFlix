@@ -1,7 +1,6 @@
 
-
 .browse-container {
-  background: #7be0ac;
+  background: black;
   height: 2000px;
   width: 100%;
 }
@@ -11,20 +10,17 @@
   justify-content: space-between;
 }
 .browse-left {
-  padding-top: 15px;
-  padding-left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 50px;
 }
-.browse-logo {
-  color: red;
-  font-size: 25px;
-  margin: 10px 10px 10px 10px;
-  font-weight: bold;
- }
 
- .browse-home, .browse-tv, .browse-movies {
+.browse-link {
    color: white;
    font-size: 15px;
-   margin: 10px 10px 10px 10px;
+   font-family: Helvetica;
+   padding-left: 25px;
  }
 
  .browse-right {
@@ -37,25 +33,54 @@
   color: white;
   margin: 10px 10px 10px 10px;
   font-size: 20px;
+  padding: 7px 7px 7px 7px;
  }
 
- .browse-title {
+ .browse-large-video {
+   height: 100%;
+   width: 100%;
+ }
+
+ 
+ .carousel-container {
+   background: black;
+   min-height: 250px;
+   padding-left: 50px;
+  }
+ 
+ 
+ .genre-title {
    color: white;
    font-size: 20px;
+   font-family: Helvetica;
  }
-
-
-.browse-action-1, 
-.browse-action-2 {
-    display: flex;
-    padding: 0 55px;
-}
-
-.action-vid {
-  background: red;
-  flex: 0 0 19.7%;
-  text-align: center;
-  margin: 0 2px;
-  transition: transform 300ms ease 100ms;
-}
  
+  
+.videos-container {
+  display: flex;
+  margin: 20px 0;
+  width: 100%;
+
+}
+
+.video {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 150px;
+  width: 250px;
+  padding-right: 5px;
+}
+
+.video:hover {
+  transform: scale(1.7);
+  -webkit-transform: scale(1.7);
+  transition: transform .35s;
+}
+
+
+.video[poster] {
+  object-fit: fill;
+}
+
+
+
