@@ -1,0 +1,48 @@
+.genre-selector {
+  padding-left: 50px; 
+  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.video-type-title {
+  color: white;
+  font-size: 30px;
+  font-family: Helvetica;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  padding-left: 50px;
+}
+
+.dropdown-button {
+
+  width: 108px;
+  height: 10px;
+  background-color: black;
+  border: 1px solid white;
+  padding: 12px;
+  color: white;
+  font-family: Helvetica;
+  text-align: left;
+}
+
+.genres-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  right: 0px;
+  width: 134px;
+  background-color: rgb(0,0,0.9);
+  position: absolute;
+  box-shadow: 0px 8px 8px 0px rgba(255, 255, 255, 0.15);
+}
+
+.genre-item {
+  font-size: 14px;
+  padding: 8px 16px;
+  color: white;
+  font-family: Helvetica;
+}

@@ -1,6 +1,6 @@
 
 .browse-container {
-  background: black;
+  background: rgb(16,16,16);
   height: 2000px;
   width: 100%;
 }
@@ -8,6 +8,7 @@
 .browse-nav-container {
   display: flex;
   justify-content: space-between;
+  padding-top: 10px;
 }
 .browse-left {
   display: flex;
@@ -24,36 +25,44 @@
  }
 
  .browse-right {
-   padding-top: 15px;
    padding-right: 15px;
+   display: flex;
+   align-items: center;
  }
 
  .browse-logout-button {
   background-color: red;
   color: white;
-  margin: 10px 10px 10px 10px;
-  font-size: 20px;
+  font-size: 15px;
   padding: 7px 7px 7px 7px;
  }
 
- .browse-large-video {
-   height: 100%;
+ .browse-featured-item > div {
+   display: flex;
+   height: 700px;
    width: 100%;
+   padding-bottom: 30px;
+   box-sizing: border-box;
+   padding-left: 50px;
  }
 
+ .featured-video {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+ }
  
- .carousel-container {
-   background: black;
+.carousel-container {
    min-height: 250px;
    padding-left: 50px;
-  }
+}
  
  
- .genre-title {
+.genre-title {
    color: white;
    font-size: 20px;
    font-family: Helvetica;
- }
+}
  
   
 .videos-container {
@@ -81,6 +90,5 @@
 .video[poster] {
   object-fit: fill;
 }
-
 
 

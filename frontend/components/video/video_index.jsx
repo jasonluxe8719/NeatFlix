@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import VideoIndexItem from './video_index_item';
-// import ReactPlayer from 'react-player';
+import VideoFeaturedItem from './video_featured_item';
+
 
 class VideoIndex extends React.Component {
   constructor(props) {
@@ -13,30 +14,36 @@ class VideoIndex extends React.Component {
   }
   
   render() {
+    if ( !this.props.videos.length) {
+      return null;
+    }
+    // const randomVideo = this.props.videos[Math.floor(Math.random() * this.props.videos.length)];
     return(
     <div className="browse-container">
-      <header className="browse-nav-container">
-        <nav className="browse-left">
-          <Link to="/">
-              <img className="nf-logo" src={window.logoURL}/>
-          </Link>
-          <Link to="/browse">
-            <span className="browse-link">Home</span>
-          </Link>
-          <Link to="/tvshows">
-            <span className="browse-link">TV Shows</span>
-          </Link>
-          <Link to ="/movies">
-            <span className="browse-link">Movies</span>
-          </Link>
-        </nav>
+        <header className="browse-nav-container">
+          <nav className="browse-left">
+            <Link to="/">
+                <img className="nf-logo" src={window.logoURL}/>
+            </Link>
+            <Link to="/browse">
+              <span className="browse-link">Home</span>
+            </Link>
+            <Link to="/tvshows">
+              <span className="browse-link">TV Shows</span>
+            </Link>
+            <Link to ="/movies">
+              <span className="browse-link">Movies</span>
+            </Link>
+          </nav>
 
-        <nav className="browse-right">
-          <button className="browse-logout-button" onClick={this.props.logout}>Sign Out</button>
-        </nav>
-        
-      </header>
-      <br/>
+          <nav className="browse-right">
+            <button className="browse-logout-button" onClick={this.props.logout}>Sign Out</button>
+          </nav>
+          
+        </header>
+      <div className="browse-featured-item">
+          <VideoFeaturedItem featured={this.props.videos[Math.floor(Math.random() * this.props.videos.length)]} />
+      </div>
 
       <div className="carousel-container">
         <span className="genre-title">Action</span>
@@ -50,7 +57,7 @@ class VideoIndex extends React.Component {
           </section>
       </div>
       <div className="carousel-container">
-        <span className="genre-title">K-Dramas</span>
+        <span className="genre-title">K-dramas</span>
           <section className="videos-container">
                 {this.props.videos.filter(vid => vid.name === "K-dramas").map((video) =>
                   <VideoIndexItem

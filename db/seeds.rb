@@ -14,7 +14,7 @@ User.destroy_all
 u1 = User.create({email: "demouser@neatflix.com", password: "123456"}) # demo user
 
 g1 = Genre.create({name: "Action"})
-g2 = Genre.create({name: "K-dramas"})
+g2 = Genre.create({name: "K-Dramas"})
 g3 = Genre.create({name: "Comedy"})
 g4 = Genre.create({name: "Anime"})
 

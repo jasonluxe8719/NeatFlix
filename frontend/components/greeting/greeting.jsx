@@ -21,7 +21,7 @@ class Greeting extends React.Component {
         <header>
           <nav className="signin-signup">
             <Link to="/">
-              <img src={window.logoURL} />
+              <img className="nf-logo" src={window.logoURL} />
             </Link>
             <div className="nav-links">
               <Link to="/login">

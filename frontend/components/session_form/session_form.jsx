@@ -39,7 +39,7 @@ class SessionForm extends React.Component {
       <div className="session-form-container">
         <nav>
           <Link to="/">
-            <img src={window.logoURL} />
+            <img className="nf-logo" src={window.logoURL} />
           </Link>
         </nav>
         <form onSubmit={this.handleSubmit} className="session-form-box">

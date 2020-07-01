@@ -2,11 +2,12 @@ import { connect } from 'react-redux';
 
 import { logout } from '../../actions/session_actions';
 import { fetchVideos } from '../../actions/video_actions';
-import MovieTypeIndex from './movie_type_index';
+import VideoTypeIndex from './video_type_index';
 
 const mapStateToProps = state => ({
   videos: Object.values(state.entities.videos)
-    .filter(vid => vid.video_type === "movie")
+    .filter(vid => vid.video_type === "movie"),
+  videoType: 'Movies'
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -17,4 +18,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(MovieTypeIndex);
+)(VideoTypeIndex);
