@@ -69,7 +69,7 @@ class Search extends React.Component {
           <div className="carousel-container">
             <span className="genre-title">Search Results</span>
 
-            {this.state.keyword !== "" ? 
+            {this.state.keyword ? 
               (<section className="videos-container">
                 {this.props.videos.map((video) =>
                 <VideoIndexItem

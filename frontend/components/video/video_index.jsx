@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import VideoIndexItem from './video_index_item';
 import VideoFeaturedItem from './video_featured_item';
-import Search from '../search/search';
+
 
 
 class VideoIndex extends React.Component {
