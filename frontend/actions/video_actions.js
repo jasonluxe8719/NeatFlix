@@ -26,3 +26,17 @@ export const fetchVideo = id => dispatch => (
       dispatch(receiveVideo(video))
     ))
 );
+
+export const filterbyGenre = genreName => dispatch => (
+  VideoApiUtil.filterbyGenre(genreName)
+    .then(videos => (
+      dispatch(receiveVideos(videos))
+    ))
+);
+
+export const searchVideos = keyword => dispatch => (
+  VideoApiUtil.searchVideos(keyword)
+    .then(videos => (
+      dispatch(receiveVideos(videos))
+    ))
+);

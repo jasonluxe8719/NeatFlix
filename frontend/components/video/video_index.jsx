@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import VideoIndexItem from './video_index_item';
 import VideoFeaturedItem from './video_featured_item';
+import Search from '../search/search';
 
 
 class VideoIndex extends React.Component {
@@ -37,6 +38,9 @@ class VideoIndex extends React.Component {
           </nav>
 
           <nav className="browse-right">
+            <Link to="/search">
+              <span className="search-button">Search!</span>
+            </Link>
             <button className="browse-logout-button" onClick={this.props.logout}>Sign Out</button>
           </nav>
           
@@ -57,9 +61,9 @@ class VideoIndex extends React.Component {
           </section>
       </div>
       <div className="carousel-container">
-        <span className="genre-title">K-dramas</span>
+        <span className="genre-title">Korean</span>
           <section className="videos-container">
-                {this.props.videos.filter(vid => vid.name === "K-dramas").map((video) =>
+                {this.props.videos.filter(vid => vid.name === "Korean").map((video) =>
                   <VideoIndexItem
                     video={video}
                     key={video.id}

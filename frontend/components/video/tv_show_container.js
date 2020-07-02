@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { logout } from '../../actions/session_actions';
-import { fetchVideos } from '../../actions/video_actions';
+import { fetchVideos, filterbyGenre } from '../../actions/video_actions';
 import VideoTypeIndex from './video_type_index';
 
 const mapStateToProps = state => ({
@@ -12,7 +12,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
-  fetchVideos: () => dispatch(fetchVideos())
+  fetchVideos: () => dispatch(fetchVideos()),
+  filterbyGenre: genreName => dispatch(filterbyGenre(genreName))
 });
 
 export default connect(

@@ -19,6 +19,7 @@ class VideoFeaturedItem extends React.Component {
 
 
   }
+  
 
   handleHide(e) {
     // const myVideo = document.getElementsByClassName('video')[0];

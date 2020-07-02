@@ -13,3 +13,16 @@ export const fetchVideo = id => {
   })
 };
 
+export const filterbyGenre = genreName => {
+  return $.ajax({
+    url: `/api/videos/genre`,
+    data: { genreName }
+  })
+};
+
+export const searchVideos = keyword => {
+  return $.ajax({
+    url: '/api/videos',
+    data: { keyword }
+  })
+};

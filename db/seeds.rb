@@ -14,7 +14,7 @@ User.destroy_all
 u1 = User.create({email: "demouser@neatflix.com", password: "123456"}) # demo user
 
 g1 = Genre.create({name: "Action"})
-g2 = Genre.create({name: "K-Dramas"})
+g2 = Genre.create({name: "Korean"})
 g3 = Genre.create({name: "Comedy"})
 g4 = Genre.create({name: "Anime"})
 
@@ -139,5 +139,104 @@ v11 = Video.create({title: "The Garden of Words",
 
 v11_clip = open("https://neatflix-seeds.s3.amazonaws.com/gardenofwords.mp4")
 v11.clip.attach(io: v11_clip, filename: "gardenofwords.mp4")
-v11_photo = open("https://neatflix-seeds.s3.amazonaws.com/gardenofwords.jpeg")
-v11.photo.attach(io: v11_photo, filename: 'gardenofwords.jpeg')
+v11_photo = open("https://neatflix-seeds.s3.amazonaws.com/gardenofwords.jpg")
+v11.photo.attach(io: v11_photo, filename: 'gardenofwords.jpg')
+
+v12 = Video.create({title: "Parasite",
+  description: "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+  genre_id: g2.id,
+  video_type: "movie"
+  })
+
+v12_clip = open("https://neatflix-seeds.s3.amazonaws.com/parasite.mp4")
+v12.clip.attach(io: v12_clip, filename: "parasite.mp4")
+v12_photo = open("https://neatflix-seeds.s3.amazonaws.com/parasite.jpg")
+v12.photo.attach(io: v12_photo, filename: "parasite.jpg")
+
+v13 = Video.create({title: "The Fast and the Furious: Tokyo Drift",
+  description: "Sean Boswell (Lucas Black) always feels like an outsider, but he defines himself through his victories as a street racer. His hobby makes him unpopular with the authorities, so he goes to live with his father in Japan. Once there and even more alienated, he learns about an exciting, but dangerous, new style of the sport. The stakes are high when Sean takes on the local champion and falls for the man's girlfriend.",
+  genre_id: g1.id,
+  video_type: "movie"
+  })
+
+v13_clip = open("https://neatflix-seeds.s3.amazonaws.com/tokyodrift.mp4")
+v13.clip.attach(io: v13_clip, filename: "tokyodrift.mp4")
+v13_photo = open("https://neatflix-seeds.s3.amazonaws.com/tokyodrift.jpg")
+v13.photo.attach(io: v13_photo, filename: "tokyodrift.jpg")
+
+v14 = Video.create({title: "Snowpiercer",
+  description: "Survivors of Earth's second Ice Age live out their days on a luxury train that ploughs through snow and ice. The train's poorest residents, who live in the squalid caboose, plan to improve their lot by taking over the engine room.",
+  genre_id: g2.id,
+  video_type: "movie"
+  })
+
+v14_clip = open("https://neatflix-seeds.s3.amazonaws.com/snowpiercer.mp4")
+v14.clip.attach(io: v14_clip, filename: "snowpiercer.mp4")
+v14_photo = open("https://neatflix-seeds.s3.amazonaws.com/snowpiercer.jpg")
+v14.photo.attach(io: v14_photo, filename: "snowpiercer.jpg")
+
+v15 = Video.create({title: "Train to Busan",
+  description: "A man (Gong Yoo), his estranged daughter and other passengers become trapped on a speeding train during a zombie outbreak in South Korea.",
+  genre_id: g2.id,
+  video_type: "movie"
+  })
+
+v15_clip = open("https://neatflix-seeds.s3.amazonaws.com/busan.mp4")
+v15.clip.attach(io: v15_clip, filename: "busan.mp4")
+v15_photo = open("https://neatflix-seeds.s3.amazonaws.com/busan.jpg")
+v15.photo.attach(io: v15_photo, filename: "busan.jpg")
+
+v16 = Video.create({title: "The Hangover Part III",
+  description: "It's been two years since the gang known as the Wolfpack narrowly escaped disaster in Bangkok. Now, Phil (Bradley Cooper), Stu (Ed Helms) and Doug (Justin Bartha) have happy lives at home -- but Alan (Zach Galifianakis) doesn't.",
+  genre_id: g3.id,
+  video_type: "movie"
+  })
+
+v16_clip = open("https://neatflix-seeds.s3.amazonaws.com/hangover.mp4")
+v16.clip.attach(io: v16_clip, filename:"hangover.mp4")
+v16_photo = open("https://neatflix-seeds.s3.amazonaws.com/hangover.jpg")
+v16.photo.attach(io: v16_photo, filename: "hangover.jpg")
+
+v17 = Video.create({title: "The Other Guys",
+  description: "Unlike their heroic counterparts on the force, desk-bound NYPD detectives Gamble (Will Ferrell) and Hoitz (Mark Wahlberg) garner no headlines as they work day to day.",
+  genre_id: g3.id,
+  video_type: "movie"
+  })
+
+v17_clip = open("https://neatflix-seeds.s3.amazonaws.com/otherguys.mp4")
+v17.clip.attach(io: v17_clip, filename: "otherguys.mp4")
+v17_photo = open("https://neatflix-seeds.s3.amazonaws.com/otherguys.jpeg")
+v17.photo.attach(io: v17_photo, filename: "otherguys.jpeg")
+
+v18 = Video.create({title: "Haikyu",
+  description: "Haikyu!! is a Japanese shōnen manga series written and illustrated by Haruichi Furudate. The story follows Shōyō Hinata, a boy determined to become a great volleyball player despite his small stature.",
+  genre_id: g4.id,
+  video_type: "tv"
+  })
+
+v18_clip = open("https://neatflix-seeds.s3.amazonaws.com/haikyu.mp4")
+v18.clip.attach(io: v18_clip, filename: "haikyu.mp4")
+v18_photo = open("https://neatflix-seeds.s3.amazonaws.com/haikyu.jpg")
+v18.photo.attach(io: v18_photo, filename: "haikyu.jpg")
+
+v19 = Video.create({title: "A Silent Voice",
+  description: "When a grade school student with impaired hearing is bullied mercilessly, she transfers to another school. Years later, one of her former tormentors sets out to make amends.",
+  genre_id: g4.id,
+  video_type: "movie"
+  })
+
+v19_clip = open("https://neatflix-seeds.s3.amazonaws.com/silentvoice.mp4")
+v19.clip.attach(io: v19_clip, filename: "silentvoice.mp4")
+v19_photo = open("https://neatflix-seeds.s3.amazonaws.com/silentvoice.jpg")
+v19.photo.attach(io: v19_photo, filename: "silentvoice.")
+
+v20 = Video.create({title: "Ni No Kuni",
+  description: "Ni no Kuni is a series of role-playing video games published by Bandai Namco worldwide and developed and published by Level-5 in Japan. The first games in the series chiefly follow the young Oliver, and his journey to another world to save his mother and stop the beckoning evil.",
+  genre_id: g4.id,
+  video_type: "movie"
+  })
+
+v20_clip = open("https://neatflix-seeds.s3.amazonaws.com/ninokuni.mp4")
+v20.clip.attach(io: v20_clip, filename: "ninokuni.mp4")
+v20_photo = open("https://neatflix-seeds.s3.amazonaws.com/ninokuni.jpg")
+v20.photo.attach(io: v20_photo, filename: "ninokuni.jpg")

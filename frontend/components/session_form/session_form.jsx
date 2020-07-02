@@ -5,23 +5,24 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: 'Email',
-      password: 'Password'
+      email: '',
+      password: ''
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  
   update(field) {
     return e => this.setState({[field]: e.currentTarget.value });
   }
-
+  
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
   }
-
+  
   renderErrors() {
     return(
       <ul>
@@ -33,27 +34,34 @@ class SessionForm extends React.Component {
       </ul>
     );
   }
+  
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
 
   render() {
     return (
       <div className="session-form-container">
-        <nav>
+        <nav className="browse-nav-container">
           <Link to="/">
             <img className="nf-logo" src={window.logoURL} />
           </Link>
         </nav>
         <form onSubmit={this.handleSubmit} className="session-form-box">
-          <p className="form-type">{this.props.formType}</p>
-          {this.renderErrors()}
+          <p className="form-type">
+            {this.props.formType === "Sign In" ? "Sign In" : "Sign Up"}
+          </p>
           <div className="session-form"> 
             <br/>
             <input type="text"
+              placeholder="Email"
               value={this.state.email}
               onChange={this.update('email')}
               className="session-input-email"
             />
             <br/>
             <input type="password"
+              placeholder="Password"
               value={this.state.password}
               onChange={this.update('password')}
               className="session-input-password"
@@ -66,6 +74,7 @@ class SessionForm extends React.Component {
           
           
           </div>
+          <span className="error-message">{this.renderErrors()}</span>
         </form>
       </div>
     )
