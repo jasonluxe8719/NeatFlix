@@ -16,7 +16,7 @@
 
 ### Videos Playinng on Hover and Images Displaying on Mouse-Out
 
-```
+```c
   handleHover(e) {
     e.target.muted = false;
     e.target.play();
