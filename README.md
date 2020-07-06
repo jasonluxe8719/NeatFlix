@@ -14,6 +14,35 @@
 
 # **Features**
 
-### Videos Playing on Hover
+### Videos Playinng on Hover and Images Displaying on Mouse-Out
+
+```
+  handleHover(e) {
+    e.target.muted = false;
+    e.target.play();
+  }
+  
+
+  handleHide(e) {
+    e.target.pause();
+  }
+
+  render() {
+    const { featured } = this.props;
+
+    return (
+      <div>
+        <video
+          src={featured.clip}
+          poster={featured.photo}
+          className="featured-video"
+          onMouseOver={this.handleHover}
+          onMouseOut={this.handleHide}
+          muted="muted"
+        />
+      </div>
+    )
+  }
+ ```
 
 
