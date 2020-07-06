@@ -78,6 +78,6 @@
  ### Upcoming Features
  
  * Videos Carousel Effect
- * My List to add favorite videos
+ * My List to add and remove a list of favorite videos
 
 
