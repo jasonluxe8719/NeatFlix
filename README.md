@@ -44,5 +44,40 @@
     )
   }
  ```
+ 
+ ### Search Videos by Title or Genre
+ 
+ Used jQuery's $.ajax() function to search for and fetch videos based on a keyword and then render videos that match the conditions.
+ 
+ ```c
+ class Search extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      keyword: '',
+      videos: ''
+    }
+
+    this.update = this.update.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
+
+  update(field) {
+    return e => (
+      this.setState({ [field]: e.target.value })
+    );
+  }
+
+  handleInputChange(e) {
+    e.preventDefault();
+    this.setState({ videos: this.props.searchVideos(this.state.keyword) });
+  }
+ ```
+ 
+ ### Upcoming Features
+ 
+ * Videos Carousel Effect
+ * My List to add favorite videos
 
 
