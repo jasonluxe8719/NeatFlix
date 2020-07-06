@@ -7,7 +7,7 @@
 
 **Technologies Used**
 
-Back-End: Ruby on Rails, PostgreSQL, AWS S3
-Front_End: React, Redux, CSS
+* Back-End: Ruby on Rails, PostgreSQL, AWS S3
+* Front-End: React, Redux, CSS
 
 
