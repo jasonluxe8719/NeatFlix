@@ -5,9 +5,16 @@
 
 [NeatFlix Live](https://neatflix.herokuapp.com/#/)
 
-**Technologies Used**
 
-* Back-End: Ruby on Rails, PostgreSQL, AWS S3
+# **Technologies Used**
+
+* Back-End: Ruby on Rails, PostgreSQL, AWS S3 (for videos and photos storage)
 * Front-End: React, Redux, CSS
+
+
+# **Features**
+
+
+
 
 
