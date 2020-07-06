@@ -3,25 +3,11 @@
 **NeatFlix is a web app clone of Netflix that allows subscribed users to experience quality home television services with a wide variety of available videos.**
 
 
-[Visit NeatFlix!](https://neatflix.herokuapp.com/#/)
+[NeatFlix Live](https://neatflix.herokuapp.com/#/)
+
+**Technologies Used**
+
+Back-End: Ruby on Rails, PostgreSQL, AWS S3
+Front_End: React, Redux, CSS
 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
