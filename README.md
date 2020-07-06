@@ -14,7 +14,6 @@
 
 # **Features**
 
-
-
+*** Videos Playing on Hover *** 
 
 
