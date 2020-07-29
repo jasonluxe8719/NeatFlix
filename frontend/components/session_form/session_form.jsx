@@ -72,8 +72,10 @@ class SessionForm extends React.Component {
             className="session-submit"
             />
           
-          
           </div>
+            <p className="underline">
+              {this.props.formType === "Sign In" ? <Link to="/signup">Sign Up</Link>: <Link to="/login">Sign In</Link>}
+            </p>
           <span className="error-message">{this.renderErrors()}</span>
         </form>
       </div>

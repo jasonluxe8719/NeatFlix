@@ -24,6 +24,7 @@ class Greeting extends React.Component {
               <img className="nf-logo" src={window.logoURL} />
             </Link>
             <div className="nav-links">
+              <a className="linkedin" href="https://linkedin.com/in/jasonpark0119">LinkedIn</a>
               <a className="github" href="https://github.com/jasonluxe8719/NeatFlix">GitHub</a>
               <Link to="/login">
                 <input className="signin-button"
