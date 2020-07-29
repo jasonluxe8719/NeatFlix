@@ -24,6 +24,7 @@ class Greeting extends React.Component {
               <img className="nf-logo" src={window.logoURL} />
             </Link>
             <div className="nav-links">
+              <a className="github" href="https://github.com/jasonluxe8719/NeatFlix">GitHub</a>
               <Link to="/login">
                 <input className="signin-button"
                 type="submit" value="Sign In"/>

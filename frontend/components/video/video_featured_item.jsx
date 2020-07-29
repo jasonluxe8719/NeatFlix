@@ -10,20 +10,12 @@ class VideoFeaturedItem extends React.Component {
   }
 
   handleHover(e) {
-
-    // const myVideo = document.getElementsByClassName('video')[0];
-    // debugger
     e.target.muted = false;
-    // myVideo.muted = false;
     e.target.play();
-
-
   }
   
 
   handleHide(e) {
-    // const myVideo = document.getElementsByClassName('video')[0];
-    // myVideo.pause();
     e.target.pause();
   }
 
@@ -43,6 +35,8 @@ class VideoFeaturedItem extends React.Component {
       </div>
     )
   }
+
+  
 
 }
 
