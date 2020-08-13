@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import VideoIndexItem from './video_index_item';
-import VideoFeaturedItem from './video_featured_item';
 
 
 
@@ -12,6 +11,14 @@ class VideoIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchVideos();
+  }
+
+  playFeaturedVideo(e) {
+    e.currentTarget.play();
+  }
+
+  stopFeaturedVideo(e) {
+    e.currentTarget.load();
   }
   
   render() {
@@ -46,7 +53,14 @@ class VideoIndex extends React.Component {
           
         </header>
       <div className="browse-featured-item">
-          <VideoFeaturedItem featured={this.props.videos[Math.floor(Math.random() * this.props.videos.length)]} />
+          <video
+           src={this.props.videos[Math.floor(Math.random() * this.props.videos.length)].clip} 
+           className="featured-video"
+           width="100%"
+           onMouseOver={this.playFeaturedVideo}
+           onMouseOut={this.stopFeaturedVideo}
+           muted="muted"
+           />
       </div>
 
       <div className="carousel-container">

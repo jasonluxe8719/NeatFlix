@@ -45,7 +45,7 @@
   border-radius: 5px;
  }
 
- .browse-featured-item > div {
+ .browse-featured-item {
    display: flex;
    height: 700px;
    width: 100%;
@@ -55,9 +55,7 @@
  }
 
  .featured-video {
-  height: 100%;
-  width: 100%;
-  object-fit: fill;
+  object-fit: cover;
  }
  
 .carousel-container {
