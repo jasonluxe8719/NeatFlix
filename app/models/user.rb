@@ -7,6 +7,14 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
+  has_one :mylist,
+    foreign_key: :user_id,
+    class_name: :Favorite
+
+  has_many :mylist_videos,
+    through: :mylist,
+    source: :video
+
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)

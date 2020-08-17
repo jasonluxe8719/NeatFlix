@@ -14,6 +14,7 @@ class VideoIndex extends React.Component {
   }
 
   playFeaturedVideo(e) {
+    e.currentTarget.muted = false;
     e.currentTarget.play();
   }
 
