@@ -1,1 +1,1 @@
-json.extract! @mylist, :id, :user_id, :video_id
+json.extract! favorite, :id, :user_id, :video_id

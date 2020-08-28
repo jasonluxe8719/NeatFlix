@@ -1,28 +1,43 @@
 import * as FavoriteApiUtil from '../util/favorite_api_util';
 
-export const ADD_TO_MYLIST = 'ADD_TO_MYLIST';
-export const DELETE_FROM_MYLIST = 'DELETE_FROM_MYLIST';
+export const GET_MYLIST = 'GET_MYLIST';
+export const CREATE_MYLIST = 'CREATE_MYLIST';
+export const DELETE_MYLIST = 'DELETE_MYLIST';
 
-const receiveMylistVideo = (video, currentUser) => ({
-  type: ADD_TO_MYLIST,
-  video,
-  currentUser
-});
+const getMylist = videos => {
+  return {
+    type: GET_MYLIST,
+    videos
+  }
+};
 
-const deleteMylistVideo = (videoId, currentUser) => ({
-  type: DELETE_FROM_MYLIST,
-  videoId,
-  currentUser
-});
+const createMylist = videoId => {
+  return {
+    type: CREATE_MYLIST,
+    videoId
+  }
+};
 
-export const addToMylist = (video, currentUser) => (dispatch) => (
-  FavoriteApiUtil.addToMylist(video)
-  .then(video => dispatch(receiveMylistVideo(video, currentUser)))
+const deleteMylist = videoId => {
+  return {
+    type: DELETE_MYLIST,
+    videoId
+  }
+}
+
+export const getFavorites = (videos) => (dispatch) => (
+  FavoriteApiUtil.getFavorites(videos)
+  .then((videos) => dispatch(getMylist(videos)))
 );
 
-export const deleteFromMylist = (videoId, currentUser) => (dispatch) => (
-  FavoriteApiUtil.deleteFromMylist(videoId)
-  .then(() => dispatch(deleteMylistVideo(videoId, currentUser)))
+export const createFavorite = (videoId) => (dispatch) => (
+  FavoriteApiUtil.createFavorite(videoId)
+  .then((vid) => dispatch(createMylist(vid)))
+);
+
+export const deleteFavorite = (id) => (dispatch) => (
+  FavoriteApiUtil.deleteFavorite(id)
+  .then((videoId) => dispatch(deleteMylist(videoId)))
 );
 
 

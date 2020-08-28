@@ -1,14 +1,21 @@
-export const addToMylist = (video) => (
+export const getFavorites = () => (
   $.ajax({
-    method: 'POST',
-    url: `/api/videos/${video.video_id}/favorite`,
-    data: { video }
+    method: 'GET',
+    url: "api/favorites"
   })
 );
 
-export const deleteFromMylist = (videoId) => (
+export const createFavorite = (videoId) => (
+  $.ajax({
+    method: 'POST',
+    url: "api/favorites",
+    data: { videoId }
+  })
+);
+
+export const deleteFavorite = (id) => (
   $.ajax({
     method: 'DELETE',
-    url: `/api/videos/${videoId}/favorite`
+    url: `/api/favorites/${id}`
   })
 );

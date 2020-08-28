@@ -1,6 +1,4 @@
 class Favorite < ApplicationRecord
-  validates :user_id, :video_id, presence: true
-  validates :video_id, uniqueness: {scope: :user_id}
   
   belongs_to :user,
     primary_key: :id,
